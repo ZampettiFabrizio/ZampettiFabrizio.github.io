@@ -41,11 +41,41 @@ p{line-height: 28px; color: #666; font-weight: 300;}
     text-align: center;
 }
 
+.dropdown-content{
+    display:none;
+    position:absolute;
+    background-color:rgba(0,0,0,0.90);
+    min-width:160px;
+    border-radius: 0 8% 8% 8%;
+    box-shadow: 0px 0px 2px 0px #484848;
+    z-index: 1;
+}
+
+.dropdown-content a{
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover{background-color: #484848; transition: 0.3s;}
+.dropdown:hover .dropdown-content{display: block;}
+
 .menu li{
     width: 100px;
     border-radius: 10%;
     text-align: center;
 }
+.dropdown:hover .dropbtn{
+    width: 100px;
+    border-radius: 10% 10% 0 0;
+    text-align: center;
+    background-color: #484848;
+    transition: 0.3s;
+}
+
+.dropdown-content a:hover{background-color: rgba(72, 72, 72, 0.85);border-radius: 0 14px 14px 14px; transition: .2s;}
+
 .menu li:hover{
     background-color: #484848;
     transition: 0.3s;
@@ -94,7 +124,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 }
 
 .menu li{ display: inline-block;}
-.menu li a{color: var(--gold); padding: 20px; display: block;}
+.menu li a, .dropbtn{color: var(--gold); padding: 20px; display: block;}
 
 .icon{
     display: none;
@@ -112,6 +142,8 @@ div.cta{
 
     .logo{transform: scale(0.8); margin-top: 0; margin-left: -30px;}
 
+    li.dropdown:hover{display: none;}
+    li.dropdown{visibility: hidden;}
     .menu{
         position: absolute;
         top: -16px;
@@ -251,7 +283,7 @@ div.cta{
     display: flex;
     padding: 10opx 0;
     background: linear-gradient(0, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-     url('bg-video.png') no-repeat center center;
+     url('bg-scripts.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -263,6 +295,28 @@ div.cta{
     .bg-cover{flex-wrap: wrap; height: auto;}
     .bg-cover__text,
     .bg-cover__title{width: 100%;}
+}
+
+
+/* ! BG Cover2 */
+
+.bg-cover2{
+    display: flex;
+    padding: 10opx 0;
+    height: 85vh;
+    background: linear-gradient(0, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+     url('bg_GoodLife.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.bg-cover2__text{width: 50%;padding: 30px;}
+.bg-cover2__title{width: 50%; padding: 50px; display: flex; align-items: center;}
+
+
+@media (max-width: 1024px){
+    .bg-cover2{flex-wrap: wrap; height: auto;}
+    .bg-cover2__text,
+    .bg-cover2__title{width: 100%;}
 }
 
 
