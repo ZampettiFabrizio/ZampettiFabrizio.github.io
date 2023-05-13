@@ -75,16 +75,30 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 }
 
 .dropdown-content a:hover{background-color: rgba(72, 72, 72, 0.85);border-radius: 0 14px 14px 14px; transition: .2s;}
-
+/* 
 .menu li:hover{
     background-color: #484848;
     transition: 0.3s;
-}
+} */
 
 .button:hover{
     background-color: var(--darkGold);
     color: black;
     transition: 0.4s;
+}
+
+@media (min-width: 1350px){
+    .underline {
+        width: calc(100%);
+        background-image: linear-gradient(transparent calc(100% - 1.5px), var(--gold) 1.5px);
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        transition: background-size 0.5s;
+    }
+    
+    .nav-link:hover .underline {
+        background-size: 100% 100%;
+    }
 }
 
 @media (max-width: 768px) {
