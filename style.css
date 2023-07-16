@@ -377,7 +377,7 @@ div.cta{
     padding: 150px 0;
 }
 
-.footer p, .footer a{
+.footer p, .footer a, .footer a:visited{
     color: black;
     text-align: center;
 }
