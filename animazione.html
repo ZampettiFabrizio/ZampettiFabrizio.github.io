@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-animation.css">
+    <title>Prova</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sfumatura"></div>
+        <div id="sfondo"></div>
+        <div class="logo__container">
+            <img src="logoCorona3.png" alt="logo" id="primoLogo">
+            <img src="logoCorona3.png" alt="logo" id="terzoLogo">
+            <img src="logoCorona3.png" alt="logo" id="secondoLogo">
+        </div>
+    </div>
+</body>
+<script>
+    const primoLogo = document.getElementById("primoLogo");
+    const secondoLogo = document.getElementById("secondoLogo");
+    const terzoLogo = document.getElementById("terzoLogo");
+
+    function checkWindowSize() {
+        if (window.innerWidth <= 530) {
+            primoLogo.src = "smallSize.png";
+            secondoLogo.src = "smallSize.png";
+            terzoLogo.src = "smallSize.png";
+        } else {
+            primoLogo.src = "logoCorona3.png";
+            secondoLogo.src = "logoCorona3.png";
+            terzoLogo.src = "logoCorona3.png";
+        }
+    }
+
+    window.addEventListener('resize', checkWindowSize);
+
+    checkWindowSize();
+
+</script>
+
+</html>
