@@ -376,6 +376,15 @@ div.cta{
     font-size: 30px;
 }
 
+.carousel-cell__content:hover{
+    background-color: #686868;
+    border-radius: 50%;
+    transition: 0.5s;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 
 /* ! Footer */
 .footer{
