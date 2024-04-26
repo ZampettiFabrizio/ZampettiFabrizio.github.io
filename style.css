@@ -374,6 +374,7 @@ div.cta{
     line-height: 350px;
     text-align: center;
     font-size: 30px;
+    transition: 0.5s;
 }
 
 .carousel-cell__content:hover{
