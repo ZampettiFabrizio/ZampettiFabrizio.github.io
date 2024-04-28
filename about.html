@@ -39,6 +39,8 @@
                         class="underline">Fiverr</a></span></li>
             <li><a href="https://www.upwork.com/freelancers/~0197c3ffd89aba2e14" class="nav-link" target="_blank"><span
                         class="underline">UpWork</a></span></li>
+            <li><a href="./more.html" class="nav-link" target="_blank"><span
+                class="underline">More</a></span></li>
             <!-- <li><a href="">Contacts</a></li> -->
             <!-- <li class="dropdown">
                 <a class="dropbtn" href="">Contacts</a>
@@ -76,39 +78,64 @@
                 My experience has allowed me to work on complex projects. They are able to write clean and well-structured code, respecting development standards and best practices.
             </p>
                 
-                <h4 class="normal-text tw">Professional web developer avaible</h4>
-                <p class="tw">I am passionate about technology and keep myself constantly updated on the latest trends and technologies in the field of web development. I am able to work on custom projects to meet customers' specific needs.
-                    I am available for freelance collaborations or full-time contracts and I am always ready to face new challenges and learn new technologies. If you are looking for a competent and experienced web developer, feel free to contact me.
-                    </p>
+            <h4 class="normal-text tw">Professional web developer avaible</h4>
+            <p class="tw">I am passionate about technology and keep myself constantly updated on the latest trends and technologies in the field of web development. I am able to work on custom projects to meet customers' specific needs.
+                I am available for freelance collaborations or full-time contracts and I am always ready to face new challenges and learn new technologies. If you are looking for a competent and experienced web developer, feel free to contact me.
+            </p>
                 
-            </div>
         </div>
+    </div>
         
 
-    <footer class="footer mt-2">
-        <div class="grid reveal">
-            <!-- <div class="col">
-                <h4 class="normal-text tw">Instagram</h4>
-                <p>@fabrizio_zampetti</p>
-            </div> -->
-            <!-- <div class="col">
-                <h4 class="normal-text tw">Facebook</h4>
-                <p>facebookDiFabrizioZampetti</p>
-            </div> -->
-            <div class="col">                
-                <h4 class="normal-text tw"><span><img src="fiverr.svg" alt="fiverrImg" style="width: 70px; margin: 0;"></span></h4>
-                <p><a href="https://www.fiverr.com/zampfabrizio" target="_blank" >@zampfabrizio</a></p>
-            </div>
-            <div class="col">
-                <h4 class="normal-text tw"><span><img src="upWork.png" alt="upWorkImg" style="width: 70px; margin: 0;"></span></h4>
-                <p><a href="https://www.upwork.com/freelancers/~0197c3ffd89aba2e14 " target="_blank" >Fabrizio Z.</a></p>
-            </div>
-            <div class="col">
-                <h4 class="normal-text tw"><span><img src="gMail.png" alt="gMailImg" style="width: 70px; margin: 0;"></span></h4>
-                <p><a href="mailto:zampettifabrizio.dev@gmail.com" target="_blank" >zampettifabrizio.dev@gmail.com</a></p>
+        <div class="inner-header">
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(154, 129, 48,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(223, 186, 64,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(292, 243, 80,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(95, 79, 28)" />
+                </g>
+                </svg>
             </div>
         </div>
-    </footer>
+
+        <footer class="footer mt-2">
+            <div class="grid reveal">
+                <!-- <div class="col">
+                    <h4 class="normal-text tw">Instagram</h4>
+                    <p>@fabrizio_zampetti</p>
+                </div> -->
+                <!-- <div class="col">
+                    <h4 class="normal-text tw">Facebook</h4>
+                    <p>facebookDiFabrizioZampetti</p>
+                </div> -->
+                <div class="col">
+                    <a href="https://www.fiverr.com/zampfabrizio" target="_blank">
+                        <h4 class="normal-text tw"><span><img src="fiverr.svg" alt="fiverrImg"
+                            style="width: 70px; margin: 0;"></span></h4>
+                    </a>
+                    <p><a href="https://www.fiverr.com/zampfabrizio" target="_blank">@zampfabrizio</a></p>
+                </div>
+                <div class="col">
+                    <a href="https://www.upwork.com/freelancers/~0197c3ffd89aba2e14" target="_blank">
+                        <h4 class="normal-text tw"><span><img src="upWork.png" alt="upWorkImg"
+                            style="width: 70px; margin: 0;"></span></h4>
+                    </a>
+                    <p><a href="https://www.upwork.com/freelancers/~0197c3ffd89aba2e14 " target="_blank">Fabrizio Z.</a></p>
+                </div>
+                <div class="col">
+                    <a href="mailto:zampettifabrizio.dev@gmail.com" target="_blank"><h4 class="normal-text tw"><span><img src="gMail.png" alt="gMailImg"
+                        style="width: 70px; margin: 0;"></span></h4></a>
+                    <p><a href="mailto:zampettifabrizio.dev@gmail.com" target="_blank">zampettifabrizio.dev@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
     
 
 
@@ -125,6 +152,12 @@
                 $(".menu").toggleClass("menu--open");
             });
         });
+
+        $(document).ready(function(){
+            $('.icon').click(function(){
+                $(this).toggleClass('open');
+            });
+        });   
 
         var lastScroll = 0;
         document.addEventListener("scroll", () => {
