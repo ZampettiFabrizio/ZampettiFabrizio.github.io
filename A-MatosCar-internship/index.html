@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+    crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="my_jquery_functions.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A MatosCar</title>
+</head>
+<body>    
+    <div class="container">
+        <ul class="nav m-5 mt-0 nav-tabs nav-justified rounded-bottom border border-3 border-dark">
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="startBtn">START</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="endBtn">END</a>
+          </ul>
+
+          <!--Start form-->
+          <div id="startForm" class="container p-3 first-form mt-5">
+            <form class="text-dark">
+                <div class="mb-3">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
+                        <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                      </svg></span>
+                    <label for="startDate" class="form-label">START DATE</label>
+                    <input type="date" class="form-control" id="startDate">
+                  </div>
+              <div class="mb-3">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                  </svg></span>
+                <label for="startTime" class="form-label">START TIME</label>
+                <input type="startTime" class="form-control" id="startTime">
+              </div>
+          </form>
+          </div>
+
+          <!--Info Start form-->
+          <div id="infoStartForm" class="container p-3 first-form mt-5 mb-5">
+            <form class="text-dark">
+                <div class="mb-3">
+                  <!-- <p id="prova">Prova</p> -->
+                  <span><img src="290081.png" style="height: 30px;"></span>
+                    <label for="startPlate" class="form-label">PLATE</label>
+                    <input type="text" class="form-control plate" id="startPlate" required oninput="convertToUpper(), checkInput()">
+                </div>
+              <div class="mb-3">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-dots" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                    <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                  </svg></span>
+                <label for="reasonSelection" class="form-label">REASON</label>
+                <select class="form-select" id="reasonSelection">
+                    <option>Option1</option>
+                    <option>Option2</option>
+                    <option>Option3</option>
+                    <option>Option4</option>
+                  </select> 
+              </div>
+              <div class="mb-3">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-dots" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                    <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                  </svg></span>
+                <label for="startComments" class="form-label">COMMENTS</label>
+                <textarea class="form-control" id="startComments" rows="3"></textarea>
+              </div>
+              <div class="form-check mb-3">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="anomaly"> Report anomaly
+                </label>
+              </div>
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary disabled" id="startSubmit">SUBMIT</button>
+              </div>
+          </form>
+          </div>
+
+
+
+          <!--End page-->
+          <div id="endForm" class="container sf p-3 first-form mt-5">
+            <form class="text-dark">
+                <div class="mb-3">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
+                        <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                      </svg></span>
+                    <label for="endDate" class="form-label">END DATE</label>
+                    <input type="date" class="form-control" id="endDate">
+                  </div>
+              <div class="mb-3">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                  </svg></span>
+                <label for="endTime" class="form-label">END TIME</label>
+                <input type="time" class="form-control" id="endTime">
+              </div>
+              <div class="mb-3">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-speedometer2" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+                    <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+                  </svg></span>
+                    <label for="end" class="form-label">END</label>
+                    <input type="text" class="form-control" id="end">
+                  </div>
+          </form>
+          </div>
+
+          <!--Info End form-->
+          <div id="infoEndForm" class="container sf p-3 first-form mt-5 mb-5">
+            <form class="text-dark">
+                <div class="mb-3">
+                  <span><img src="290081.png" style="height: 30px;"></span>
+                    <label for="endPlate" class="form-label">PLATE</label>
+                    <input type="text" class="form-control plate" id="endPlate" oninput="convertToUpper1(), checkInput1()">
+                </div>
+                <div class="form-check mb-3">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" name="anomaly"> Report anomaly
+                    </label>
+                  </div>
+              <div class="mb-3">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                  </svg></span>
+                <label for="locationSelection" class="form-label">LOCATION</label>
+                <select class="form-select" id="locationSelection">
+                    <option>Option1</option>
+                    <option>Option2</option>
+                    <option>Option3</option>
+                    <option>Option4</option>
+                  </select>
+                  <input type="text" class="form-control mt-1" id="otherLocation" placeholder="if another location">
+              </div>
+              <div class="mb-3">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-dots" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                    <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                  </svg></span>
+                <label for="endComments" class="form-label">COMMENTS</label>
+                <textarea class="form-control" id="endComments" rows="3"></textarea>
+              </div>              
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary disabled" id="endSubmit">SUBMIT</button>
+              </div>
+          </form>
+          </div>
+          <div class="container tableSearch">
+            <input type="text" class="form-control mb-1" id="inputSearch" placeholder="Search..." name="inputSearch">
+            <table class="table border border-3 border-dark table-bordered table-hover table-striped">
+              <thead>
+                <tr id="title">
+                  <th>Plate</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                </tr>
+                </thead>
+                <tbody id="myTable">
+                <tr>
+                  <td>AA00AA</td>
+                  <td>06 / 06 / 2023</td>
+                  <td>12:12</td>                  
+                </tr>
+                <tr>
+                  <td>22-CC-22</td>
+                  <td>07 / 06 / 2023</td>
+                  <td>2:52</td>                  
+                </tr>
+                <tr>
+                  <td>BB11BB</td>
+                  <td>08 / 06 / 2023</td>
+                  <td>18:15</td>                  
+                </tr>
+                <tr>
+                  <td>33-DD-33</td>
+                  <td>12 / 06 / 2023</td>
+                  <td>19:23</td>                  
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

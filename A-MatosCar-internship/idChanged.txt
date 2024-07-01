@@ -1,0 +1,17 @@
+start => startBtn
+end => endBtn
+form => startForm && endForm
+date => startDate && endDate
+time => startTime && endTime
+form1 => infoStartForm && infoEndForm
+plate => startPlate
+comments => startComments && endComments
+submit => startSubmit
+plate1 => endPlate
+location => otherLocation
+submit1 => endSubmit
+myInput => inputSearch
+
+NEW 
+reasonSelection
+locationSelection

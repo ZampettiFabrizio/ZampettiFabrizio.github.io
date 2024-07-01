@@ -1,0 +1,77 @@
+body{
+    background: linear-gradient(rgb(227, 227, 227), rgb(161, 161, 161)) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.nav-link:hover{
+    border:none;
+    font-weight: bold;
+    transition: .3s;
+    text-decoration: underline;
+    color: black;
+    text-decoration-thickness: 2px;
+}
+
+.nav{
+    background-color: rgb(255, 98, 0);
+}
+
+.nav-item:hover .nav-link{
+    background-color:rgb(213, 82, 0) ;
+    transition: .3s;
+}
+
+#myTable tr:hover{
+    background-color: #0bf3ff;
+}
+
+tr{
+    text-align: center;
+}
+
+.nav-item{
+    border: 1px solid black;
+}
+
+tr:nth-child(even){
+    background-color: gainsboro;
+}
+
+#title{
+    background-color: rgb(133, 133, 131);
+}
+
+tr:nth-child(odd){
+    background-color: rgb(201, 201, 201);
+}
+
+.nav-link{
+    color: black;
+}
+
+.form-control, .input-group-text, .form-select{
+    border-radius: 10px;
+}
+
+.first-form{
+    /* background:linear-gradient(rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0.2)); */
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.sf{
+    display: none;
+}
+
+.error, .error::selection, .error:hover{
+    background-color: red;
+    border: 3px solid black;
+}
+
+.btn{
+    background-color:  #006ac6 !important;
+}
+
+.tableSearch{
+    height: 200px;
+}
