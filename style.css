@@ -243,7 +243,7 @@ div.cta {
         top: -16px;
         z-index: 0;
         right: -100%;
-        background-color: rgb(43, 43, 43);
+        background-color: rgb(33, 33, 33);
         height: 130vh;
         width: 100%;
         padding-left: 0px;
@@ -551,6 +551,7 @@ div.cta {
     padding: 40px 0;
 }
 
+
 .carousel-cell {
     height: 350px;
     width: 350px;
@@ -563,7 +564,7 @@ div.cta {
 .carousel-cell__content {
     width: 100%;
     height: 100%;
-    background-color: #484848;
+    background-color: rgb(33, 33, 33);
     border-radius: 15%;
     line-height: 350px;
     text-align: center;
@@ -572,20 +573,17 @@ div.cta {
 }
 
 .carousel-cell__content:hover {
-    background-color: #686868;
+    background-color: #484848;
     border-radius: 50%;
     transition: 0.5s;
-    font-size: 40px;
+    font-size: 32px;
     font-weight: bold;
     text-decoration: underline;
 }
 
-/*@media (max-width: 768px){
-    .carousel-cell{
-        width: 100vw;
-    }
-}*/
-
+@media (max-width: 768px) {
+    .carousel-cell__content:hover{border-radius: 15%;}    
+}
 
 /* ! Footer */
 .footer {
@@ -728,6 +726,7 @@ div.cta {
     font-size: 22px;
     height: 0px;
     margin-top: 25px;
+    width: 100%;
 }
 
 .card-desc {
@@ -751,7 +750,7 @@ div.cta {
 
 @media (max-width:768px) {
     .card {
-        max-width: 80vw;
+        width: 80vw;
         padding: 0;
         height: 300px;
     }
@@ -771,8 +770,9 @@ div.cta {
         height: auto;
     }
 
-    .card-title {
-        margin-top: 0;
+    .card-title {margin-top: 0;}
+    .card:hover {
+        transform: none;
     }
 }
 
