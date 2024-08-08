@@ -1,0 +1,60 @@
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
+  animation: moveUpDown 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-image: url('Images/phonePreview.png');
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+  animation:none;
+}
+
+
+/*
+   * Extra utilities
+   */
+
+.flex-equal>* {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .flex-md-equal>* {
+    flex: 1;
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+      transform: translateY(0) rotate(30deg);
+  }
+
+  50% {
+      transform: translateY(10px) rotate(30deg);
+  }
+
+  100% {
+      transform: translateY(0) rotate(30deg);
+  }
+}

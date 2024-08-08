@@ -1,0 +1,39 @@
+:root{
+    --colorePrincipale:#7A08F7;
+    --colorePrincipale2: #910BFE;
+    --coloreSecondario: #A89884;
+}
+
+*::selection{background-color: var(--coloreSecondario);}
+
+.bg-purple {background-color: var(--colorePrincipale);}
+
+a.bg-purple:hover, button.bg-purple:hover{background-color: var(--colorePrincipale2) ;}
+
+.bg-secondario {
+    background-color: var(--coloreSecondario);
+}
+
+.color-white2 {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.color-white2:hover {
+    color: rgb(255, 255, 255) !important;
+}
+
+.navbar a:hover{text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);}
+.disabled{color: rgb(174, 174, 174) !important;}
+
+.darker {
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4))
+}
+
+.navbar{transition: all 0.8s;}
+@media (max-width:992px){
+    .navbar{border-radius: 0 0 8px 8px;}
+}
+footer{background-color: var(--coloreSecondario);}
+footer *::selection{background-color: gray;}
+footer a{color: var(--colorePrincipale);}
+footer a:hover{color: var(--colorePrincipale2);}

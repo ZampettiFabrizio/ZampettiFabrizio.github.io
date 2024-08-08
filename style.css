@@ -681,7 +681,7 @@ div.cta {
 }
 
 @media(max-width: 920px) {
-    .bg-animated {height: 230%;}
+    .bg-animated {height: 230%;} /* 76.6 * CARD */
 }
 
 

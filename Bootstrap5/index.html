@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FZ_Bootstrap5</title>
+    <link rel="icon" href="./Images/bs5_Logo_Icon.png">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="product.css" rel="stylesheet">
+    <link href="features.css" rel="stylesheet">
+
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/features/">
+</head>
+
+<body class="bg-light">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="bootstrap" viewBox="0 0 118 94">
+            <title>Bootstrap</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z">
+            </path>
+        </symbol>
+        <symbol id="speedometer" viewBox="0 0 16 16">
+            <path
+                d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2M3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.39.39 0 0 0-.029-.518z" />
+            <path fill-rule="evenodd"
+                d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.95 11.95 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0" />
+        </symbol>
+        <symbol id="c-circle-fill" viewBox="0 0 16 16">
+            <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c.961 0 1.641.633 1.729 1.512h1.295v-.088c-.094-1.518-1.348-2.572-3.03-2.572-2.068 0-3.269 1.377-3.269 3.638v1.073c0 2.267 1.178 3.603 3.27 3.603 1.675 0 2.93-1.02 3.029-2.467v-.093H9.875c-.088.832-.75 1.418-1.729 1.418-1.224 0-1.927-.891-1.927-2.461v-1.06c0-1.583.715-2.503 1.927-2.503" />
+        </symbol>
+        <symbol id="arrows-fullscreen" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707m0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707m-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707" />
+        </symbol>
+        <symbol id="laptop" viewBox="0 0 16 16">
+            <path
+                d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5" />
+        </symbol>
+        <symbol id="pc-display" viewBox="0 0 16 16">
+            <path
+                d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0M9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5M1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2z" />
+        </symbol>
+        <symbol id="tablet" viewBox="0 0 16 16">
+            <path
+                d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+        </symbol>
+        <symbol id="phone" viewBox="0 0 16 16">
+            <path
+                d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+        </symbol>
+    </svg>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-purple fixed-top shadow">
+        <div class="container-fluid container-md">
+            <a href="https://zampettifabrizio.com" target="_self"><img class="navbar-brand" src="../logoFZ_White.png"
+                    width="150px"></a>
+            <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav fs-5">
+                    <a class="nav-link color-white2" href="#">Home</a>
+                    <a class="nav-link color-white2" href="#vantaggi">Vantaggi</a>
+                    <a class="nav-link color-white2" href="#prezzi">Prezzi</a>
+                    <a class="nav-link color-white2 disabled fst-italic" href="#">Album</a>
+                    <a class="nav-link color-white2 disabled fst-italic" href="#">Blog</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" style="margin-top: 86px;" src="./Images/bs5_logo.png" alt="logo Bootstrap"
+            width="120">
+        <h1 class="display-5 fw-bold">Bootstrap 5</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Esempio di sito creato con Bootstrap</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="https://it.fiverr.com/s/bd5QaZP" target="_blank"
+                    class="btn btn-primary btn-lg px-4 gap-3 bg-purple">Fiverr</a>
+                <a href="mailto:zampettifabrizio.dev@gmail.com" class="btn btn-outline-dark btn-lg px-4">Scrivimi</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container px-4 py-5" id="vantaggi">
+        <h2 class="pb-2 border-bottom">Vantaggi</h2>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5" id="custom-cards">
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('Images/velocita.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 darker">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Efficienza e Rapidità di Sviluppo</h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi bi-speedometer me-lg-2 me-1" width="1em" height="1em">
+                                    <use xlink:href="#speedometer" />
+                                </svg>
+                                <small>Velocità</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi bi-c-circle-fill me-lg-2 me-1" width="1em" height="1em">
+                                    <use xlink:href="#c-circle-fill" />
+                                </svg>
+                                <small>pexels.com</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('Images/devices.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 darker">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Responsive Design & Multi-Device Compatibility
+                        </h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi bi-pc-display me-lg-1 d-none d-lg-inline" width="1em" height="1em">
+                                    <use xlink:href="#pc-display" />
+                                </svg>
+                                <svg class="bi bi-tablet me-lg-1 d-none d-lg-inline" width="1em" height="1em">
+                                    <use xlink:href="#tablet" />
+                                </svg>
+                                <svg class="bi bi-laptop me-lg-1 ms-md-0 ms-2" width="1em" height="1em">
+                                    <use xlink:href="#laptop" />
+                                </svg>
+                                <svg class="bi bi-phone me-lg-2 me-1" width="1em" height="1em">
+                                    <use xlink:href="#phone" />
+                                </svg>
+                                <small>Responsive</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi bi-c-circle-fill me-lg-2 me-1" width="1em" height="1em">
+                                    <use xlink:href="#c-circle-fill" />
+                                </svg>
+                                <small>pexels.com</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('Images/device1.jpg');">
+
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 darker">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Costi Ridotti e Facilità di Adattamento</h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi bi-arrows-fullscreen ms-md-0 ms-2 me-lg-2 me-1" width="1em" height="1em">
+                                    <use xlink:href="#arrows-fullscreen" />
+                                </svg>
+                                <small>Adattamento</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi bi-c-circle-fill me-lg-2 me-1" width="1em" height="1em">
+                                    <use xlink:href="#c-circle-fill" />
+                                </svg>
+                                <small>unsplash.com</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product -->
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="display-4 fw-normal">Personalizzazione</h1>
+            <p class="lead fw-normal">Bootstrap rende facile e veloce la creazione di un sito e si adatta molto alle
+                esigenze grafiche del cliente.</p>
+            <a class="btn btn-outline-secondary" href="https://it.fiverr.com/s/bd5QaZP" target="_blank">Ottieni il tuo
+                sito</a>
+        </div>
+        <div class="product-device shadow-sm d-none d-lg-block shadow-lg"></div>
+        <div class="product-device product-device-2 shadow-sm d-none d-lg-block shadow"></div>
+    </div>
+
+    <div class="container py-5 mt-5" id="prezzi">
+        <!-- Pricing -->
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center" style=" max-width: 700px;">
+            <h1 class="display-4 fw-normal">Prezzi</h1>
+            <p class="fs-5 text-muted">I prezzi indicati non rappresentano un'offerta commerciale vincolante, sono
+                puramente indicativi e hanno solo scopo illustrativo. Per
+                informazioni personalizzate, si prega di contattarmi direttamente.
+            </p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-lg">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Landing Page</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">€169</h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Single page website</li>
+                            <li>Sviluppo entro 24h</li>
+                            <li>Numero revisioni: 2</li>
+                        </ul>
+                        <a href="https://it.fiverr.com/zampfabrizio" target="_blank" type="button"
+                            class="w-100 btn btn-lg btn-outline-dark">Fiverr</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-lg">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Portfolio Website</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">€497</h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Multi-page website</li>
+                            <li>Sviluppo entro 3 giorni</li>
+                            <li>Numero revisioni: 6</li>
+                        </ul>
+                        <a href="https://it.fiverr.com/s/EgEGYr8" type="button" target="_blank"
+                            class="w-100 btn btn-lg btn-dark">Offerta</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-lg">
+                    <div class="card-header py-3 text-white border-primary bg-purple">
+                        <h4 class="my-0 fw-normal">Blog</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">€849</h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Blog website</li>
+                            <li>Sviluppo entro 5 giorni</li>
+                            <li>Numero revisioni: 9</li>
+                        </ul>
+                        <a href="mailto:zampettifabrizio.dev@gmail.com" type="button"
+                            class="w-100 btn btn-lg text-light bg-purple">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="fluid mb-0">
+        <div class="container p-4 pt-5" style="max-width: 900px;">
+            <div class="row g-5">
+                <div class="col-md-6 col-12">
+                    <p class="display-6 fw-bolder">FZ_Bootstrap5</p>
+                    <p>Il sito web è stato creato con lo scopo di illustrare come può venire un design con Bootstrap 5
+                        per una <strong>landing page</strong>, un <strong>sito album</strong> che illustra immagini o un <strong>blog</strong>.</p>
+                </div>
+                <div class="col-md-3 col-6 ms-0 ms-md-5">
+                    <p class="fw-bold fs-3 mt-2">Altro</p>
+                    <ul class="list-unstyled" style="font-size: 17px;">
+                        <li><a href="https://zampettifabrizio.com" target="_blank">La mia landing page</a></li>
+                        <li><a href="https://fzwebsites.github.io" target="_blank">Sito con animazioni</a></li>
+                        <li><a href="https://cuoremarchigiano.github.io" target="_blank">Cuore Marchigiano</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                    <p class="fw-bold fs-3 mt-2">Contatti</p>
+                    <ul class="list-unstyled" style="font-size: 17px;">
+                        <li><a href="mailto:zampettifabrizio.dev@gmail.com" target="_blank">E-Mail</a></li>
+                        <li><a href="#" target="_blank">Fiverr</a></li>
+                        <li><a href="#" target="_blank">UpWork</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        var lastScroll = 0;
+        document.addEventListener("scroll", () => {
+            if (lastScroll < window.scrollY) {
+                document.getElementsByClassName("navbar")[0].style = "top: -160px;"
+            } else {
+                document.getElementsByClassName("navbar")[0].style = "top: 0px;"
+            }
+            lastScroll = window.scrollY;
+        });
+
+        const links = document.getElementById("navbarNavAltMarkup");
+        const btn = document.getElementById("navbar-toggler");
+        links.addEventListener("click", () => {
+            btn.classList.add("collapsed");
+            btn.ariaExpanded = false;
+            links.classList.remove("show");
+            document.getElementsByClassName("navbar")[0].style = "top: -160px";
+        });
+    </script>
+</body>
+
+</html>
