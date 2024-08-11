@@ -35,9 +35,17 @@
       }
     }
 
-    .marketing img {
+    .marketing .personaggi img {
       border-radius: 50%;
       border: 2.5px solid rgba(0, 0, 0, 0.8);
+    }
+
+    .marketing .featurette img {
+      border-radius: 20px;
+      height: 500px;
+      width: 500px;
+      border: 2.5px solid rgba(0, 0, 0, 0.8);
+      object-fit: cover;
     }
 
     .marketing p {
@@ -214,9 +222,9 @@
 
 
   <div class="container marketing mt-5">
-    <div class="row text-center">
+    <div class="row personaggi text-center">
       <div class="col-lg-4 mb-5 mb-md-0 figura">
-        <img src="Images/giulio-cesare.jpg" height="140" width="140" alt="giulio-cesare" class="shadow">
+        <img src="Images/giulio-cesare.jpg" height="140" width="140" alt="giulio-cesare" class="shadow mb-2">
 
         <h2 id="primaIntestazione">Intestazione</h2>
         <p id="primaDescrizioneFigura">Alcuni contenuti placeholder rappresentativi per le tre colonne di testo sotto il
@@ -230,7 +238,7 @@
           </svg> Modifica</button>
       </div>
       <div class="col-lg-4 mb-5 mb-md-0 figura">
-        <img src="Images/machiavelli.jpg" height="140" width="140" alt="machaivelli" class="shadow">
+        <img src="Images/machiavelli.jpg" height="140" width="140" alt="machaivelli" class="shadow mb-2">
 
         <h2 id="secondaIntestazione">Intestazione</h2>
         <p id="secondaDescrizioneFigura">Un altro interessante pezzo di contenuto placeholder rappresentativo. Questa
@@ -244,7 +252,7 @@
           </svg> Modifica</button>
       </div>
       <div class="col-lg-4 figura">
-        <img src="Images/dante.jpg" height="140" width="140" alt="dante" class="shadow">
+        <img src="Images/dante.jpg" height="140" width="140" alt="dante" class="shadow mb-2">
 
         <h2 id="terzaIntestazione">Intestazione</h2>
         <p id="terzaDescrizioneFigura">E infine questa, la terza colonna di contenuti placeholder rappresentativi.</p>
@@ -270,7 +278,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body" id="toastDescription">
-          Description
+          Descrizione
         </div>
       </div>
     </div>
@@ -279,69 +287,61 @@
 
 
 
-    <!-- START THE FEATURETTES -->
+    <!-- FEATURETTES -->
 
     <hr class="featurette-divider mt-5">
 
-    <div class="row featurette mt-5">
+    <div class="row featurette mt-5 my-4 figura">
       <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span>
+        <h2 id="primoTitoloFeaturettes" class="featurette-heading">Cinque Terre: un angolo di paradiso sulla riviera
+          ligure
         </h2>
-        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.
+        <p id="primaDescrizioneFeaturettes" class="lead">Le Cinque Terre, con i loro pittoreschi borghi colorati
+          arroccati su scogliere a picco sul mare, offrono un'esperienza unica di bellezza naturale e cultura italiana.
+          Questo angolo di paradiso, patrimonio dell'UNESCO, incanta i visitatori con i suoi paesaggi mozzafiato, i
+          sentieri panoramici e la genuina ospitalità ligure.
         </p>
       </div>
       <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice" focusable="false">
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-        </svg>
-
+        <img role="img" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow-sm"
+          src="Images/cinqueTerre.jpg" alt="Cinque Terre">
       </div>
     </div>
 
     <hr class="featurette-divider">
 
-    <div class="row featurette">
+    <div class="row featurette my-4 figura">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this
-          layout would work with some actual real-world content in place.</p>
+        <h2 id="secondoTitoloFeaturettes" class="featurette-heading">Ferrari: l'icona dell'innovazione e della velocità
+        </h2>
+        <p id="secondaDescrizioneFeaturettes" class="lead">
+          La Ferrari è molto più di un semplice marchio automobilistico; rappresenta l'eccellenza italiana nel design,
+          nella tecnologia e nelle prestazioni. Con oltre 70 anni di storia, Ferrari continua a spingere i limiti
+          dell'ingegneria automobilistica, incarnando il sogno di velocità e lusso per appassionati di tutto il mondo.
+        </p>
       </div>
-      <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice" focusable="false">
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-        </svg>
-
+      <div class="col-md-5 order-md-1 ">
+        <img role="img" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow-sm"
+          src="Images/ferrari.jpg" alt="Ferrari">
       </div>
     </div>
 
     <hr class="featurette-divider">
 
 
-    <div class="row featurette">
+    <div class="row featurette my-4 mb-5 figura">
       <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really
-          intended to be actually read, simply here to give you a better view of what this would look like with some
-          actual content. Your content.</p> <!-- TROVA IL MASSIMO DEI CARATTERI PRIMA DELLA MODIFICA INSERIMENTO -->
+        <h2 id="terzoTitoloFeaturettes" class="featurette-heading">Pizza: il simbolo universale del gusto italiano</h2>
+        <p id="terzaDescrizioneFeaturettes" class="lead">La pizza, con le sue origini umili a Napoli, è diventata
+          un'icona culinaria globale. Dalla classica Margherita alle versioni più creative, è amata per la sua
+          semplicità e versatilità, riuscendo a unire culture diverse sotto il segno del gusto e della tradizione
+          italiana.</p> <!-- TROVA IL MASSIMO DEI CARATTERI PRIMA DELLA MODIFICA INSERIMENTO -->
       </div>
       <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice" focusable="false">
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-        </svg>
-
+        <img role="img" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow-sm"
+          src="Images/pizza.jpg" alt="Pizza">
       </div>
     </div>
-
-    <hr class="featurette-divider">
 
   </div>
 
@@ -394,6 +394,7 @@
     const btn = document.getElementById("navbar-toggler");
     var myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
     const figure = document.getElementsByClassName("figura");
+    const body = document.getElementsByTagName("body")[0];
     var lastScroll = 0;
 
     document.addEventListener("scroll", () => {
@@ -424,7 +425,7 @@
         const cookieName = cookie.split('=')[0].trim();
         document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
       });
-      console.log("Reset successfull");
+      location.reload();
     }
 
     function getCookie(nome) {
@@ -444,12 +445,14 @@
       if (edit.style.background == "green") {
         showButtons();
         edit.style.background = "none";
+        //Carousel
         for (let i = 0; i < carouselCaptions.length; i++) {
           carouselCaptions[i].classList.remove("animazioneTratteggio");
           for (let j = 0; j < carouselCaptions[i].children.length; j++) {
             carouselCaptions[i].children[j].removeEventListener("click", listenEditElements);
           }
         }
+        //Marketing
         for (let i = 0; i < figure.length; i++) {
           figure[i].classList.remove("animazioneTratteggio");
           for (let j = 0; j < figure[i].children.length; j++) {
@@ -483,6 +486,9 @@
         // <input type="text" class="form-control" id="input" aria-describedby="inputEdit">
         const input = document.createElement("input");
         input.type = "text";
+        if(cliccato && cliccato.parentElement.parentElement.classList.contains("personaggi")){
+          input.maxLength = 25;
+        }
         input.className = "form-control";
         input.id = "input";
         input.ariaDescribedby = "inputEdit";
@@ -494,6 +500,9 @@
         // <textarea class="form-control" placeholder="Inserisci la descrizione qui" id="input" style="height: 100px"></textarea>
         const input = document.createElement("textarea");
         input.className = "form-control";
+        if(cliccato && cliccato.parentElement.paparentElementrent.classList.contains("personaggi")){
+          input.maxLength = 136;
+        }
         input.placeholder = "Inserisci la descrizione qui";
         input.id = "input";
         input.value = cliccato.innerHTML;
@@ -504,17 +513,64 @@
     }
 
     function salvaModifica() {
-      console.log(cliccato);
-      console.log("Nome: " + cliccato.id + "; valore: " + document.getElementById("input").value);
-      setCookie(cliccato.id, document.getElementById("input").value);
-      cliccato.innerHTML = document.getElementById("input").value;
-      document.getElementById("input").value = "";
-      if (cliccato.tagName == "H1" || cliccato.tagName == "H2" || cliccato.tagName == "H3" || cliccato.tagName == "H4") {
-        creaToast("Modifica avvenuta", "ora", "Modifica titolo avvenuta con successo.");
-      } else if (cliccato.tagName == "P") {
-        creaToast("Modifica avvenuta", "ora", "Modifica descrizione avvenuta con successo.");
+      //MODIFICA GENERALI
+      if (document.getElementsByClassName("modal-title")[0].innerHTML == "Generali") {
+        switch (document.getElementById("bgColor").value) {
+          case "1":
+            body.className = "bg-light";
+            if (document.getElementsByClassName("marketing")[0].classList.contains("text-light"))
+              document.getElementsByClassName("marketing")[0].classList.remove("text-light");
+            for (let i = 0; i < document.getElementsByClassName("marketing")[0].children[0].children.length; i++) {
+              let elemento = document.getElementsByClassName("marketing")[0].children[0].children[i];
+              if (elemento.children[3].classList.contains("bg-purple")) {
+                elemento.children[3].classList.remove("bg-purple");
+              }
+              if (document.getElementById("liveToast").classList.contains("bg-secondary")) {
+                document.getElementById("liveToast").classList.remove("bg-secondary");
+              }
+            }
+            break;
+          case "2":
+            body.className = "bg-secondary";
+            if (document.getElementsByClassName("marketing")[0].classList.contains("text-light"))
+              document.getElementsByClassName("marketing")[0].classList.remove("text-light");
+            for (let i = 0; i < document.getElementsByClassName("marketing")[0].children[0].children.length; i++) {
+              let elemento = document.getElementsByClassName("marketing")[0].children[0].children[i];
+              if (elemento.children[3].classList.contains("bg-purple")) {
+                elemento.children[3].classList.remove("bg-purple");
+              }
+              if (document.getElementById("liveToast").classList.contains("bg-secondary")) {
+                document.getElementById("liveToast").classList.remove("bg-secondary");
+              }
+            }
+            break;
+          case "3":
+            body.className = "bg-dark";
+            document.getElementsByClassName("marketing")[0].classList.add("text-light");
+            for (let i = 0; i < document.getElementsByClassName("marketing")[0].children[0].children.length; i++) {
+              let elemento = document.getElementsByClassName("marketing")[0].children[0].children[i];
+              elemento.children[3].classList.add("bg-purple");
+            }
+            document.getElementById("liveToast").classList.add("bg-secondary");
+            break;
+        }
+        setCookie("bgColor", document.getElementById("bgColor").value);
+        creaToast("Modifica avvenuta", "ora", "Modifica generali avvenuta con successo.");
+        myModal.hide();
+      } else {
+        //MODIFICA CON CLICK
+        console.log(cliccato);
+        console.log("Nome: " + cliccato.id + "; valore: " + document.getElementById("input").value);
+        setCookie(cliccato.id, document.getElementById("input").value);
+        cliccato.innerHTML = document.getElementById("input").value;
+        document.getElementById("input").value = "";
+        if (cliccato.tagName == "H1" || cliccato.tagName == "H2" || cliccato.tagName == "H3" || cliccato.tagName == "H4") {
+          creaToast("Modifica avvenuta", "ora", "Modifica titolo avvenuta con successo.");
+        } else if (cliccato.tagName == "P") {
+          creaToast("Modifica avvenuta", "ora", "Modifica descrizione avvenuta con successo.");
+        }
+        myModal.hide();
       }
-      myModal.hide();
     }
 
 
@@ -530,7 +586,7 @@
         }
       }
 
-      //FIGURE
+      //Titoli FIGURE
       for (let i = 0; i < figure.length; i++) {
         for (let j = 0; j < figure[i].children.length; j++) {
           if (figure[i].children[j].id) {
@@ -541,14 +597,59 @@
         }
       }
 
-      //Descrizione FIGURE
+      //Titoli Seconda Parte Marketing
       for (let i = 0; i < figure.length; i++) {
         for (let j = 0; j < figure[i].children.length; j++) {
-          if (figure[i].children[j].id) {
-            if (getCookie(figure[i].children[j].id)) {
-              document.getElementById(figure[i].children[j].id).innerHTML = getCookie(figure[i].children[j].id);
+          if (figure[i].children[j].children.length > 1) {
+            for (let k = 0; k < figure[i].children[j].children.length; k++) {
+              if (getCookie(figure[i].children[j].children[k].id)) {
+                document.getElementById(figure[i].children[j].children[k].id).innerHTML = getCookie(figure[i].children[j].children[k].id);
+              }
             }
           }
+        }
+      }
+
+      //Generali
+      if (getCookie("bgColor")) {
+        switch (getCookie("bgColor")) {
+          case "1":
+            body.className = "bg-light";
+            if (document.getElementsByClassName("marketing")[0].classList.contains("text-light"))
+              document.getElementsByClassName("marketing")[0].classList.remove("text-light");
+            for (let i = 0; i < document.getElementsByClassName("marketing")[0].children[0].children.length; i++) {
+              let elemento = document.getElementsByClassName("marketing")[0].children[0].children[i];
+              if (elemento.children[3].classList.contains("bg-purple")) {
+                elemento.children[3].classList.remove("bg-purple");
+              }
+              if (document.getElementById("liveToast").classList.contains("bg-secondary")) {
+                document.getElementById("liveToast").classList.remove("bg-secondary");
+              }
+            }
+            break;
+          case "2":
+            body.className = "bg-secondary";
+            if (document.getElementsByClassName("marketing")[0].classList.contains("text-light"))
+              document.getElementsByClassName("marketing")[0].classList.remove("text-light");
+            for (let i = 0; i < document.getElementsByClassName("marketing")[0].children[0].children.length; i++) {
+              let elemento = document.getElementsByClassName("marketing")[0].children[0].children[i];
+              if (elemento.children[3].classList.contains("bg-purple")) {
+                elemento.children[3].classList.remove("bg-purple");
+              }
+              if (document.getElementById("liveToast").classList.contains("bg-secondary")) {
+                document.getElementById("liveToast").classList.remove("bg-secondary");
+              }
+            }
+            break;
+          case "3":
+            body.className = "bg-dark";
+            document.getElementsByClassName("marketing")[0].classList.add("text-light");
+            for (let i = 0; i < document.getElementsByClassName("marketing")[0].children[0].children.length; i++) {
+              let elemento = document.getElementsByClassName("marketing")[0].children[0].children[i];
+              elemento.children[3].classList.add("bg-purple");
+            }
+            document.getElementById("liveToast").classList.add("bg-secondary");
+            break;
         }
       }
     }
@@ -623,18 +724,16 @@
       btnReset.type = "button";
       btnReset.classList.add("btn", "btn-danger", "mt-3");
       btnReset.innerHTML = "Reset";
-      
+
       modalBody.appendChild(bgLabel);
       // modalBody.appendChild(bgPicker);
       modalBody.appendChild(select);
       modalBody.appendChild(btnReset);
       document.getElementsByClassName("modal-body")[0].appendChild(modalBody);
+      btnReset.addEventListener("click", reset);
       myModal.show();
     }
   </script>
 </body>
 
 </html>
-
-
-<!-- CONTINUAR DA RESET: PROBLEMA QUANDO SI CLICCA GENERALI SI ATTIVA LA FUNZIONE RESET() -->
