@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FZ_Bootstrap5 - Crea Tu</title>
+  <link rel="icon" href="./Images/bs5_Logo_Icon.png">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <style>
+    .carousel img {
+      height: calc(100vh - 86px);
+      object-fit: cover;
+      width: 100%;
+    }
+
+
+    .scurisci {
+      height: calc(100vh - 86px);
+      width: 100%;
+      position: absolute;
+      z-index: 3;
+      background-color: rgba(0, 0, 0, 0.297);
+    }
+
+    @media (max-width:970px) {
+      .navbar {
+        border-radius: 0;
+      }
+    }
+
+    .marketing .personaggi img {
+      border-radius: 50%;
+      border: 2.5px solid rgba(0, 0, 0, 0.8);
+    }
+
+    .marketing .featurette img {
+      border-radius: 20px;
+      height: 500px;
+      width: 500px;
+      border: 2.5px solid rgba(0, 0, 0, 0.8);
+      object-fit: cover;
+    }
+
+    .marketing p {
+      height: 72px;
+    }
+
+    #edit.btn:focus,
+    #generali.btn:focus {
+      box-shadow: none !important;
+    }
+
+    .carousel-indicators,
+    .carousel-control-prev,
+    .carousel-control-prev-icon,
+    .carousel-control-next,
+    .carousel-control-next-icon,
+    .visually-hidden,
+    .carousel-caption {
+      z-index: 64;
+    }
+
+    .animazioneTratteggio {
+      border: 3px dashed #faed27;
+      border-radius: 10px;
+      animation: dashedMoving 3s linear infinite;
+    }
+
+    @keyframes dashedMoving {
+      0% {
+        border: 3px dashed transparent;
+      }
+
+      50% {
+        border: 3px dashed #faed27;
+      }
+
+      100% {
+        border: 3px dashed transparent;
+      }
+    }
+
+    #generali {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-purple fixed-top shadow">
+    <div class="container-fluid container-md">
+      <a href="https://zampettifabrizio.com" target="_self"><img class="navbar-brand" src="../logoFZ_White.png"
+          width="150px"></a>
+      <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav fs-5">
+          <a class="nav-link color-white2" href="./index.html">Home</a>
+          <a class="nav-link color-white2 disabled fst-italic" href="#">Album</a>
+          <a class="nav-link color-white2 disabled fst-italic" href="#">Blog</a>
+          <a class="nav-link color-white2 fst-italic" href="./creaTu.html">Crea tu</a>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <button id="edit" class="btn btn-lg text-light bg-purple">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-pencil-fill mb-1" viewBox="0 0 16 16">
+              <path
+                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+            </svg> Modifica</button>
+          <button onclick="settings()" id="generali" class="btn btn-lg text-light bg-purple">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-sliders mb-1" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z" />
+            </svg> Generali</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- MODALE -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- <input type="text" class="form-control" id="input" aria-describedby="inputEdit"> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Elimina</button>
+          <button type="button" onclick="salvaModifica()" class="btn btn-success">Salva</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="margin-top: 86px;">
+    <div class="scurisci"></div>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Images/adp.jpg" alt="adp">
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1 id="primoTitolo">Primo titolo</h1>
+            <p id="primaDescrizione">Contenuti placeholder rappresentativi per la prima diapositiva del carosello.</p>
+            <button onclick="modificaSchermate(this)" class="btn btn-lg text-light bg-purple modifica">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-pencil-fill mb-1" viewBox="0 0 16 16">
+                <path
+                  d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+              </svg> Modifica</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="Images/rome.jpg" alt="roma">
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1 id="secondoTitolo">Secondo titolo</h1>
+            <p id="secondaDescrizione">Contenuti placeholder rappresentativi per la seconda diapositiva del carosello.
+            </p>
+            <button onclick="modificaSchermate(this)" class="btn btn-lg text-light bg-purple modifica">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-pencil-fill mb-1" viewBox="0 0 16 16">
+                <path
+                  d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+              </svg> Modifica</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="Images/cesare.jpg" alt="cesare">
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1 id="terzoTitolo">Terzo titolo</h1>
+            <p id="terzaDescrizione">Contenuti placeholder rappresentativi per la terza diapositiva del carosello.</p>
+            <button onclick="modificaSchermate(this)" class="btn btn-lg text-light bg-purple modifica">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-pencil-fill mb-1" viewBox="0 0 16 16">
+                <path
+                  d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+              </svg> Modifica</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <div class="container marketing mt-5">
+    <div class="row personaggi text-center">
+      <div class="col-lg-4 mb-5 mb-md-0 figura">
+        <img id="primaImgPersonaggi" src="Images/giulio-cesare.jpg" height="140" width="140" alt="giulio-cesare"
+          class="shadow mb-2">
+
+        <h2 id="primaIntestazione">Intestazione</h2>
+        <p id="primaDescrizioneFigura">Alcuni contenuti placeholder rappresentativi per le tre colonne di testo sotto il
+          carosello. Questo è il
+          primo
+          colonna.</p>
+        <button class="btn btn-dark modifica" onclick="modificaPersonaggi(this)"><svg xmlns="http://www.w3.org/2000/svg"
+            width="13" height="13" fill="currentColor" class="bi bi-pencil-fill mb-1" viewBox="0 0 16 16">
+            <path
+              d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+          </svg> Modifica</button>
+      </div>
+      <div class="col-lg-4 mb-5 mb-md-0 figura">
+        <img id="secondaImgPersonaggi" src="Images/machiavelli.jpg" height="140" width="140" alt="machaivelli"
+          class="shadow mb-2">
+
+        <h2 id="secondaIntestazione">Intestazione</h2>
+        <p id="secondaDescrizioneFigura">Un altro interessante pezzo di contenuto placeholder rappresentativo. Questa
+          volta siamo passati alla seconda
+          colonna.
+        </p>
+        <button class="btn btn-dark modifica" onclick="modificaPersonaggi(this)"><svg xmlns="http://www.w3.org/2000/svg"
+            width="13" height="13" fill="currentColor" class="bi bi-pencil-fill mb-1" viewBox="0 0 16 16">
+            <path
+              d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+          </svg> Modifica</button>
+      </div>
+      <div class="col-lg-4 figura">
+        <img id="terzaImgPersonaggi" src="Images/dante.jpg" height="140" width="140" alt="dante" class="shadow mb-2">
+
+        <h2 id="terzaIntestazione">Intestazione</h2>
+        <p id="terzaDescrizioneFigura">E infine questa, la terza colonna di contenuti placeholder rappresentativi.</p>
+        <button class="btn btn-dark modifica" onclick="modificaPersonaggi(this)"><svg xmlns="http://www.w3.org/2000/svg"
+            width="13" height="13" fill="currentColor" class="bi bi-pencil-fill mb-1" viewBox="0 0 16 16">
+            <path
+              d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+          </svg> Modifica</button>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <img src="../FZ_Black.png" width="25px" style="border: none;" class="rounded me-3" alt="logo">
+          <strong class="me-auto" id="toastTitle"></strong>
+          <small id="toastTime"></small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="toastDescription">
+          Descrizione
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- FEATURETTES -->
+
+    <hr class="featurette-divider mt-5">
+
+    <div class="row featurette mt-5 my-4 figura">
+      <div class="col-md-7">
+        <h2 id="primoTitoloFeaturettes" class="featurette-heading">Cinque Terre: un angolo di paradiso sulla riviera
+          ligure
+        </h2>
+        <p id="primaDescrizioneFeaturettes" class="lead mb-2">Le Cinque Terre, con i loro pittoreschi borghi colorati
+          arroccati su scogliere a picco sul mare, offrono un'esperienza unica di bellezza naturale e cultura italiana.
+          Questo angolo di paradiso, patrimonio dell'UNESCO, incanta i visitatori con i suoi paesaggi mozzafiato, i
+          sentieri panoramici e la genuina ospitalità ligure.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img role="img" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow-sm"
+          src="Images/cinqueTerre.jpg" alt="Cinque Terre">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette my-4 figura">
+      <div class="col-md-7 order-md-2">
+        <h2 id="secondoTitoloFeaturettes" class="featurette-heading">Ferrari: l'icona dell'innovazione e della velocità
+        </h2>
+        <p id="secondaDescrizioneFeaturettes" class="lead mb-2">
+          La Ferrari è molto più di un semplice marchio automobilistico; rappresenta l'eccellenza italiana nel design,
+          nella tecnologia e nelle prestazioni. Con oltre 70 anni di storia, Ferrari continua a spingere i limiti
+          dell'ingegneria automobilistica, incarnando il sogno di velocità e lusso per appassionati di tutto il mondo.
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1 ">
+        <img role="img" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow-sm"
+          src="Images/ferrari.jpg" alt="Ferrari">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+
+    <div class="row featurette my-4 mb-5 figura">
+      <div class="col-md-7">
+        <h2 id="terzoTitoloFeaturettes" class="featurette-heading">Pizza: il simbolo universale del gusto italiano</h2>
+        <p id="terzaDescrizioneFeaturettes" class="lead mb-2">La pizza, con le sue origini umili a Napoli, è diventata
+          un'icona culinaria globale. Dalla classica Margherita alle versioni più creative, è amata per la sua
+          semplicità e versatilità, riuscendo a unire culture diverse sotto il segno del gusto e della tradizione
+          italiana.</p>
+      </div>
+      <div class="col-md-5">
+        <img role="img" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow-sm"
+          src="Images/pizza.jpg" alt="Pizza">
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="fluid mb-0">
+    <div class="container p-4 pt-5" style="max-width: 900px;">
+      <div class="row g-5">
+        <div class="col-md-6 col-12">
+          <p class="display-6 fw-bolder">FZ_Bootstrap5</p>
+          <p>Il sito web è stato creato con lo scopo di illustrare come può venire un design con Bootstrap 5
+            per una <strong>landing page</strong>, un <strong>sito album</strong> che illustra immagini o un
+            <strong>blog</strong>.
+          </p>
+        </div>
+        <div class="col-md-3 col-6 ms-0 ms-md-5">
+          <p class="fw-bold fs-3 mt-2">Altro</p>
+          <ul class="list-unstyled" style="font-size: 17px;">
+            <li><a href="https://zampettifabrizio.com" target="_blank">La mia landing page</a></li>
+            <li><a href="https://fzwebsites.github.io" target="_blank">Sito con animazioni</a></li>
+            <li><a href="https://cuoremarchigiano.github.io" target="_blank">Cuore Marchigiano</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-6">
+          <p class="fw-bold fs-3 mt-2">Contatti</p>
+          <ul class="list-unstyled" style="font-size: 17px;">
+            <li><a href="mailto:zampettifabrizio.dev@gmail.com" target="_blank">E-Mail</a></li>
+            <li><a href="#" target="_blank">Fiverr</a></li>
+            <li><a href="#" target="_blank">UpWork</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
