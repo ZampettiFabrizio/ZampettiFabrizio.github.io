@@ -165,8 +165,8 @@ function salvaModifica() {
                     document.getElementsByClassName("marketing")[0].classList.remove("text-light");
                 for (let i = 0; i < document.getElementsByClassName("marketing")[0].children[0].children.length; i++) {
                     let elemento = document.getElementsByClassName("marketing")[0].children[0].children[i];
-                    if (elemento.children[4].classList.contains("bg-purple")) {
-                        elemento.children[4].classList.remove("bg-purple");
+                    if (elemento.children[5].classList.contains("bg-purple")) {
+                        elemento.children[5].classList.remove("bg-purple");
                     }
                     if (document.getElementById("liveToast").classList.contains("bg-secondary")) {
                         document.getElementById("liveToast").classList.remove("bg-secondary");
@@ -179,8 +179,8 @@ function salvaModifica() {
                     document.getElementsByClassName("marketing")[0].classList.remove("text-light");
                 for (let i = 0; i < document.getElementsByClassName("marketing")[0].children[0].children.length; i++) {
                     let elemento = document.getElementsByClassName("marketing")[0].children[0].children[i];
-                    if (elemento.children[4].classList.contains("bg-purple")) {
-                        elemento.children[4].classList.remove("bg-purple");
+                    if (elemento.children[5].classList.contains("bg-purple")) {
+                        elemento.children[5].classList.remove("bg-purple");
                     }
                     if (document.getElementById("liveToast").classList.contains("bg-secondary")) {
                         document.getElementById("liveToast").classList.remove("bg-secondary");
@@ -192,7 +192,7 @@ function salvaModifica() {
                 document.getElementsByClassName("marketing")[0].classList.add("text-light");
                 for (let i = 0; i < document.getElementsByClassName("marketing")[0].children[0].children.length; i++) {
                     let elemento = document.getElementsByClassName("marketing")[0].children[0].children[i];
-                    elemento.children[4].classList.add("bg-purple");
+                    elemento.children[5].classList.add("bg-purple");
                 }
                 document.getElementById("liveToast").classList.add("bg-secondary");
                 break;
@@ -312,8 +312,8 @@ function aggiorna() {
                     document.getElementsByClassName("marketing")[0].classList.remove("text-light");
                 for (let i = 0; i < document.getElementsByClassName("marketing")[0].children[0].children.length; i++) {
                     let elemento = document.getElementsByClassName("marketing")[0].children[0].children[i];
-                    if (elemento.children[4].classList.contains("bg-purple")) {
-                        elemento.children[4].classList.remove("bg-purple");
+                    if (elemento.children[5].classList.contains("bg-purple")) {
+                        elemento.children[5].classList.remove("bg-purple");
                     }
                     if (document.getElementById("liveToast").classList.contains("bg-secondary")) {
                         document.getElementById("liveToast").classList.remove("bg-secondary");
@@ -326,8 +326,8 @@ function aggiorna() {
                     document.getElementsByClassName("marketing")[0].classList.remove("text-light");
                 for (let i = 0; i < document.getElementsByClassName("marketing")[0].children[0].children.length; i++) {
                     let elemento = document.getElementsByClassName("marketing")[0].children[0].children[i];
-                    if (elemento.children[4].classList.contains("bg-purple")) {
-                        elemento.children[4].classList.remove("bg-purple");
+                    if (elemento.children[5].classList.contains("bg-purple")) {
+                        elemento.children[5].classList.remove("bg-purple");
                     }
                     if (document.getElementById("liveToast").classList.contains("bg-secondary")) {
                         document.getElementById("liveToast").classList.remove("bg-secondary");
@@ -339,7 +339,7 @@ function aggiorna() {
                 document.getElementsByClassName("marketing")[0].classList.add("text-light");
                 for (let i = 0; i < document.getElementsByClassName("marketing")[0].children[0].children.length; i++) {
                     let elemento = document.getElementsByClassName("marketing")[0].children[0].children[i];
-                    elemento.children[4].classList.add("bg-purple");
+                    elemento.children[5].classList.add("bg-purple");
                 }
                 document.getElementById("liveToast").classList.add("bg-secondary");
                 break;
