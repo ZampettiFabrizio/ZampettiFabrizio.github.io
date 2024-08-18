@@ -27,7 +27,7 @@
   bottom: 0;
   left: 5%;
   background-color: #e5e5e5;
-  animation:none;
+  animation: bluring 3s cubic-bezier(0.42, 0, 0.58, 1) infinite;
 }
 
 
@@ -47,14 +47,28 @@
 
 @keyframes moveUpDown {
   0% {
-      transform: translateY(0) rotate(30deg);
+    transform: translateY(0) rotate(30deg);
   }
 
   50% {
-      transform: translateY(10px) rotate(30deg);
+    transform: translateY(10px) rotate(30deg);
   }
 
   100% {
-      transform: translateY(0) rotate(30deg);
+    transform: translateY(0) rotate(30deg);
+  }
+}
+
+@keyframes bluring {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

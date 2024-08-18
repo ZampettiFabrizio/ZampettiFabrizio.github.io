@@ -11,12 +11,24 @@ var myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
 const figure = document.getElementsByClassName("figura");
 const body = document.getElementsByTagName("body")[0];
 var lastScroll = 0;
+const imgHeight = document.getElementsByClassName("carousel-item")[0].children[1].style.height;
+const imgScurisci = document.getElementsByClassName("scurisci")[0].style.height;
 
 document.addEventListener("scroll", () => {
     if (lastScroll < window.scrollY) {
         document.getElementsByClassName("navbar")[0].style = "top: -160px;"
+        document.getElementsByClassName("scurisci")[0].style.height = "100vh";
+        for (let i = 0; i < document.getElementsByClassName("carousel-item").length; i++) {
+            document.getElementsByClassName("carousel-item")[i].children[1].style.height = "100vh";
+        }
+        document.getElementById("myCarousel").style = "display: fixed; top: 0";
     } else {
         document.getElementsByClassName("navbar")[0].style = "top: 0px;"
+        document.getElementsByClassName("scurisci")[0].style.height = imgScurisci;
+        for (let j = 0; j < document.getElementsByClassName("carousel-item").length; j++) {
+            document.getElementsByClassName("carousel-item")[j].children[1].style.height = imgHeight;
+        }
+        document.getElementById("myCarousel").style = "display: block; margin-top: 80px;"
     }
     lastScroll = window.scrollY;
 });
@@ -692,3 +704,26 @@ function modificaSchermate(button) {
     //     </svg> Modifica</button>
     // </div>
 }
+
+//Caricamento immagini
+for (let i = 0; i < document.getElementsByClassName("imgCarousel").length; i++) {
+    document.getElementsByClassName("imgCarousel")[i].onload = () => {
+        document.getElementsByClassName('segnaposto')[i].style.display = 'none';
+        document.getElementsByClassName("imgCarousel")[i].style.display = 'block';
+    };
+}
+
+for (let i = 0; i < document.getElementsByClassName("immagineFigura").length; i++) {
+    document.getElementsByClassName("immagineFigura")[i].onload = () => {
+        document.getElementsByClassName('segnaposto')[i + 3].style.display = 'none';
+        document.getElementsByClassName("immagineFigura")[i].style.display = 'inline-block';
+    };
+}
+
+for (let i = 0; i < document.getElementsByClassName("featuretteImg").length; i++) {
+    document.getElementsByClassName("featuretteImg")[i].onload = () => {
+        document.getElementsByClassName('segnaposto')[i + 6].style.display = 'none';
+        document.getElementsByClassName("featuretteImg")[i].style.display = 'inline-block';
+    };
+}
+

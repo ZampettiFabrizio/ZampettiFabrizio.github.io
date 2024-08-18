@@ -205,11 +205,15 @@
 
         function bgRender() {
             const bgAnimated = document.getElementsByClassName("bg-animated")[0];
-            if (window.innerWidth <= 770) {
-                bgAnimated.style = "height: " + 80 * document.getElementsByClassName("card").length + "% !important;";
-            } else if (window.innerWidth <= 920) {
-                bgAnimated.style = "height: " + 76.7 * document.getElementsByClassName("card").length + "% !important;";
-            }
+            let pageHeight = Math.max(
+                document.body.scrollHeight,
+                document.documentElement.scrollHeight,
+                document.body.offsetHeight,
+                document.documentElement.offsetHeight,
+                document.body.clientHeight,
+                document.documentElement.clientHeight
+            );
+            bgAnimated.style = "height: " + pageHeight + "px;";
             // document.getElementById("output").innerHTML = window.innerWidth ;
         }
 
