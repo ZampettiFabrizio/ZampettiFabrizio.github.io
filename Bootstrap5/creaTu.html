@@ -132,7 +132,16 @@
     }
 
     .myCarousel {
-      transition: 0.5s
+      transition: 0.5s;
+      margin-top: 80px;
+    }
+
+    @media (max-width: 768px) {
+      .myCarousel {
+        margin-top: 0;
+      }
+
+      .carousel img, .scurisci,  .segnaposto{height: 100vh;}
     }
 
     .featurette p {
@@ -145,7 +154,11 @@
         border-width: 2.5px 0 !important;
         width: 100vw !important;
       }
-      .featurette .col-md-5 {padding-right: 0 !important; padding-left: 0 !important;}
+
+      .featurette .col-md-5 {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+      }
     }
   </style>
 </head>
@@ -208,7 +221,7 @@
   </div>
 
 
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="margin-top: 80px;">
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="scurisci"></div>
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"

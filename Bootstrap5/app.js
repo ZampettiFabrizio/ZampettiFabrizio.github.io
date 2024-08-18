@@ -17,18 +17,22 @@ const imgScurisci = document.getElementsByClassName("scurisci")[0].style.height;
 document.addEventListener("scroll", () => {
     if (lastScroll < window.scrollY) {
         document.getElementsByClassName("navbar")[0].style = "top: -160px;"
-        document.getElementsByClassName("scurisci")[0].style.height = "100vh";
-        for (let i = 0; i < document.getElementsByClassName("carousel-item").length; i++) {
-            document.getElementsByClassName("carousel-item")[i].children[1].style.height = "100vh";
+        if (window.innerWidth > 768) {
+            document.getElementsByClassName("scurisci")[0].style.height = "100vh";
+            for (let i = 0; i < document.getElementsByClassName("carousel-item").length; i++) {
+                document.getElementsByClassName("carousel-item")[i].children[1].style.height = "100vh";
+            }
+            document.getElementById("myCarousel").style = "display: fixed; top: 0";
         }
-        document.getElementById("myCarousel").style = "display: fixed; top: 0";
     } else {
         document.getElementsByClassName("navbar")[0].style = "top: 0px;"
-        document.getElementsByClassName("scurisci")[0].style.height = imgScurisci;
-        for (let j = 0; j < document.getElementsByClassName("carousel-item").length; j++) {
-            document.getElementsByClassName("carousel-item")[j].children[1].style.height = imgHeight;
+        if (window.innerWidth > 768) {
+            document.getElementsByClassName("scurisci")[0].style.height = imgScurisci;
+            for (let j = 0; j < document.getElementsByClassName("carousel-item").length; j++) {
+                document.getElementsByClassName("carousel-item")[j].children[1].style.height = imgHeight;
+            }
+            document.getElementById("myCarousel").style = "display: block; margin-top: 80px;";
         }
-        document.getElementById("myCarousel").style = "display: block; margin-top: 80px;"
     }
     lastScroll = window.scrollY;
 });
