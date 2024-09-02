@@ -81,7 +81,7 @@
                     seamlessly integrate into your web projects.</p>
             </div>
         </a>
-        <a href="https://roots.sh" target="_blank">
+        <a href="https://roots.sh" class="hide" target="_blank">
             <div class="card">
                 <img src="roots.png" alt="immagine sito roots.sh" class="card-img">
                 <h2 class="card-title">Roots.sh</h2>
@@ -89,7 +89,7 @@
                     documentation with a Figma project requesting an exact replica.</p>
             </div>
         </a>
-        <a href="https://cuoremarchigiano.github.io" target="_blank">
+        <a href="https://cuoremarchigiano.github.io" class="hide" target="_blank">
             <div class="card">
                 <img src="Cuore_Marchiggiano.png" alt="immagine sito Cuore Marchigiano" class="card-img">
                 <h2 class="card-title">Cuore Marchigiano</h2>
@@ -223,6 +223,12 @@
         }
 
         window.addEventListener('resize', bgRender());
+
+        function show(){
+            for(let i = 0; i < document.getElementsByClassName("hide").length; i++){
+                document.getElementsByClassName("hide")[i].style.display = "inline-block";
+            }
+        }
     </script>
 </body>
 
